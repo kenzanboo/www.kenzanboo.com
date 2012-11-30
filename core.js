@@ -27,7 +27,7 @@ if (Meteor.isClient) {
 				break;
 			default:
 				initHome();
-		}	
+		}
 	};
 	
 	/*
@@ -37,15 +37,18 @@ if (Meteor.isClient) {
 		initHtmlEvents();		
 
 	}
-	
+	    /*
 	function initHome(){
 		setActive($('.navbar .nav li.home'));
 		$('#content').html(Template.carousel({}));
 		$('#content').append(Template.marketing({}));		
       	$('#myCarousel').carousel();
-	}
-	
-	function initTravel(){  
+	}     */
+
+    function initTravel(){
+        initHome();
+    }
+	function initHome(){
 		setActive($('.navbar .nav li.travel'));	   
 		$('#content').html(Template.travel_carousel({}));
 		$('.full_screen_wrapper').height($(window).height());

@@ -17,9 +17,37 @@
 }
 
 @media (max-width: 480px) {
+    #kenzan_nav {
+        width: 100%;
+        margin: 0;
+    }
+    .full_screen_wrapper {
+        height: 650px !important;
+    }
+    .brand {
+
+        width:300px;
+    }
+    body{
+        font-size: 8px;
+    }
+    .span6{
+        width:200px;
+    }
+    .intro{
+        width:150px;
+        top:5% !important;
+    }
+    .places {
+        top: 3% !important;
+    }
+    h3{
+        font-size: 1em;
+    }
 	#kenzan_nav.navbar-fixed-top {
 		position: static;
 	}
+
 }
 
 

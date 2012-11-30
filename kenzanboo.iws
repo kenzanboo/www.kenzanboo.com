@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19158e6a-d73e-46ca-baf6-03cf23d049b4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/styles/custom.less" afterPath="$PROJECT_DIR$/client/styles/custom.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/contact.html" afterPath="$PROJECT_DIR$/client/templates/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/footer.html" afterPath="$PROJECT_DIR$/client/templates/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/navbar.html" afterPath="$PROJECT_DIR$/client/templates/navbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/templates/travel/travel_carousel.html" afterPath="$PROJECT_DIR$/client/templates/travel/travel_carousel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/core.js" afterPath="$PROJECT_DIR$/core.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kenzanboo.iws" afterPath="$PROJECT_DIR$/kenzanboo.iws" />
-    </list>
+    <list default="true" id="19158e6a-d73e-46ca-baf6-03cf23d049b4" name="Default" comment="" />
     <ignored path="kenzanboo.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />

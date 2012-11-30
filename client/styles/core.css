@@ -1,34 +1,59 @@
 /* CSS declarations go here */
 
-.carousel {
-	background-color: #0F0F0F;
+
+/* adjusting bootstrap media queries */
+@media (max-width: 979px) {
+	#kenzan_nav.navbar-fixed-top {
+		position: fixed;
+	}
+}
+@media (max-width: 767px) {
+	body {
+		padding:0px;
+	}
+	.carousel {
+		margin:0px;
+	}
+}
+
+@media (max-width: 480px) {
+	#kenzan_nav.navbar-fixed-top {
+		position: static;
+	}
 }
 
 
 
+
+
+
+/* for bootstrap fading */
+.carousel {
+    background-color: #0F0F0F;
+}
 
 /* Bootstrap modification CSS*/
 .carousel.carousel-fade .item {
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -ms-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -ms-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
 }
+
 .carousel.carousel-fade .active.left,
 .carousel.carousel-fade .active.right {
-  left: 0;
-  z-index: 2;
-  opacity: 0;
-  filter: alpha(opacity=0);
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    filter: alpha(opacity=0);
 }
 .carousel.carousel-fade .next,
 .carousel.carousel-fade .prev {
-  left: 0;
-  z-index: 1;
+    left: 0;
+    z-index: 1;
 }
 
 .carousel.carousel-fade .carousel-control {
-  z-index: 3;
+    z-index: 3;
 }
-

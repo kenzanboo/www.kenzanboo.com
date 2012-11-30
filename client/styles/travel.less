@@ -1,24 +1,144 @@
 /*Travel*/
+
+
+
 .wh100 {
 	width:100%;
 	height:100%;
 }
 
-#travel_carousel {
-	.wh100;
-	position:relative;
-	
-	.carousel-inner {
-		.wh100;
-		.item {
-			.wh100;
-			position:absolute;
-			overflow:hidden;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-		}
-	}
+
+.fadeIn {
+    -webkit-animation: fadeIn 1900ms 1000ms 1 forwards;
+    -moz-animation: fadeIn 1900ms 1000ms 1 forwards;
+    -o-animation: fadeIn 1900ms 1000ms 1 forwards;
+    animation: fadeIn 1900ms 1000ms 1 forwards;
+
 }
+.flyUp {
+    -webkit-animation: slideUp 1900ms 4000ms 1 forwards;
+    -moz-animation: slideUp 1900ms 4000ms 1 forwards;
+    -o-animation: slideUp 1900ms 4000ms 1 forwards;
+    animation: slideUp 1900ms 4000ms 1 forwards;
+
+}
+.flyInLeft {
+    -webkit-animation: slideInLeft 900ms 2000ms 1 forwards;
+    -moz-animation: slideInLeft 900ms 2000ms 1 forwards;
+    -o-animation: slideInLeft 900ms 2000ms 1 forwards;
+    animation: slideInLeft 900ms 2000ms 1 forwards;
+
+}
+
+.trans(@trans: opacity 1s ease-in-out){	
+  -webkit-transition: @trans;
+  -moz-transition: @trans;
+  -ms-transition: @trans;
+  -o-transition: @trans;
+  transition: @trans;
+}
+
+.fade_in{
+	.trans(opacity 1s ease-in-out);
+}
+.fade_in_fast{
+	.trans(opacity 0.5s ease-in-out);
+}
+
+#travel{
+    #travel_carousel {
+        &.appear {
+            opacity:1;
+        }
+        opacity: 0;
+        .fade_in_fast;
+        .wh100;
+        border:none;
+        position:relative;
+
+        .carousel-inner {
+            .wh100;
+            .item {
+                .wh100;
+                position:absolute;
+                overflow:hidden;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+        }
+
+
+
+    }
+
+    .overlay {
+
+
+
+        .intro {
+            z-index: 3;
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            .begin {
+                opacity: 0;
+                .fadeIn;
+            }
+            .final {
+                opacity: 0;
+                .flyUp;
+                font-size: 50px;
+            }
+            font-size: 50px;
+            color: white;
+            text-transform: uppercase;
+            text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+        }
+
+        .places {
+            z-index: 3;
+            position: absolute;
+            top: 20%;
+            right: 10%;
+            color: white;
+            text-shadow: 3px 3px 0 rgba(0, 0, 0, 0.5);
+            ul {
+                list-style-type: none;
+
+                li {
+                    opacity: 0;
+                    position:relative;
+                    &:active{
+                        text-shadow: none;
+                        font-size:31px;
+                    }
+                    &:hover {
+                        color: #5de7ff;
+                    }
+                    cursor: pointer;
+                    text-align: right;
+                    font-family: "Oswald";
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 70px;
+
+                    span.city{
+                        font-size:26px;
+                    }
+                    span.nation{
+                        font-size:34px;
+                    }
+                }
+            }
+        }
+
+
+    }
+
+}
+
 	
+	
+

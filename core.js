@@ -1,4 +1,10 @@
 if (Meteor.isClient) {
+    var g_opts = {
+        fly_in_left: 'flyInLeft',
+        cities_flyin_delay: 200,
+        travel_carousel_interval: 7000
+    };
+
     initialize();
     
     Template.navbar.events({
@@ -42,17 +48,38 @@ if (Meteor.isClient) {
 	function initTravel(){  
 		setActive($('.navbar .nav li.travel'));	   
 		$('#content').html(Template.travel_carousel({}));
-		$('#travel_carousel').carousel({interval: 5000, pause:"click"});
-		$('#full_screen_wrapper').height($(window).height());
+		$('.full_screen_wrapper').height($(window).height());
+		$('#travel_carousel').carousel({
+            interval: g_opts.travel_carousel_interval,
+            pause: "click"
+		}).addClass('appear');
+
+        var delay = 0;
+        $('#travel .places li').each(function(index, el){
+            delay_time = index * g_opts.cities_flyin_delay;
+            setTimeout(function(){
+                $(el).addClass(g_opts.fly_in_left);
+            },delay_time);
+        });
+
+
+        /*init HTML Events*/
+        $('#travel .places li').click(function(q){
+            q.preventDefault();
+            targetSlide = $(this).attr('data-to')-1;
+            $('#travel_carousel').carousel(targetSlide);
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+
 	}
 	
 	function setActive(elem){
-		$(elem).addClass('active').siblings('li').removeClass('active');
+		$(elem).addClass('active').siblings().removeClass('active');
 	}
 	
 	function initHtmlEvents(){
 		$(window).resize(function(){
-			$('#full_screen_wrapper').height($(window).height());				
+			$('.full_screen_wrapper').height($(window).height());
 		});
 	}
 

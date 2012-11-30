@@ -1,20 +1,44 @@
 <template name="travel_carousel">  
-	<div id="full_screen_wrapper">  
+	<div id="travel" class="full_screen_wrapper">
 	    <div id="travel_carousel" class="carousel slide carousel-fade">
 	      <div class="carousel-inner">
-	        <div class="item active" style="background-image: url('http://i.imgur.com/csp9b.jpg')">
+	        <div class="item marseille active" style="background-image: url('http://i.imgur.com/csp9b.jpg')">
          
 	        </div>
-	        <div class="item" style="background-image: url('http://i.imgur.com/iIah6.jpg')">
+	        <div class="item san_francisco" style="background-image: url('http://i.imgur.com/iIah6.jpg')">
           
 	        </div>
-	        <div class="item" style="background-image: url('http://i.imgur.com/qqEjG.jpg')">
+	        <div class="item swiss_alps" style="background-image: url('http://i.imgur.com/qqEjG.jpg')">
           
 	        </div>
 	      </div>
 	      <a class="left carousel-control" href="#travel_carousel" data-slide="prev">‹</a>
 	      <a class="right carousel-control" href="#travel_carousel" data-slide="next">›</a>
 	    </div>
+		<div class="container ">
+			<div class="overlay row">
+                <div class="span6 intro">
+                    <h2 class="begin">The places we've been</h2>
+                    <h1 class="final">And the places we'll go...</h1>
+                </div>
+
+                <div class="places span6">
+                    <ul class="pull-right">
+                        <li data-to='1'>
+                            <span class="city">Marseille,</span><span class="nation">France</span>
+                        </li>
+                        <li data-to='2'>
+                            <span class="city">San Francisco,</span><span class="nation">California</span>
+                        </li>
+                        <li data-to='3'>
+                            <span class="city">Interlaken,</span><span class="nation">Switzerland</span>
+                        </li>
+                    </ul>
+                </div>
+			</div>
+
+
+		</div>
 	</div>
 
  

@@ -1,9 +1,19 @@
-.navbar {
+
+body {
+    font-family: 'Quicksand', 'Oswald';
+
+}
+
+#kenzan_nav.navbar {
+	&.navbar-fixed-top {
+		margin-bottom: 0px;
+	}
 	.navbar-inner {
-	
+		padding: 0;
+		margin: 0;		
 		.container {
 			.brand {
-				width: 150px;
+				width: 160px;
 				
 				img {
 					float: left;
@@ -34,17 +44,16 @@
 				
 				div {
 				 	padding: 5px;
-				}
-				
-			
-			}
-		
-		
-		}
-	
-	
+				}							
+			}			
+		}		
 	}
 
+}
+.full_screen_wrapper {
+	background-color:black;
+    position: relative;
+	
 }
 
 #contact_modal {

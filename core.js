@@ -1,10 +1,6 @@
 if (Meteor.isClient) {
     initialize();
     
-    Template.hello.greeting = function () {
-        return "Welcome to kenzanboo.com.";
-    };
-
     Template.navbar.events({
         'click li.travel' : function (event) {
 			setActive(event.currentTarget);
@@ -32,7 +28,7 @@ if (Meteor.isClient) {
 	* Initialize the javascript on the page. 
 	*/
 	function initialize(){
-				
+		initHtmlEvents();		
 
 	}
 	
@@ -52,6 +48,12 @@ if (Meteor.isClient) {
 	
 	function setActive(elem){
 		$(elem).addClass('active').siblings('li').removeClass('active');
+	}
+	
+	function initHtmlEvents(){
+		$(window).resize(function(){
+			$('#full_screen_wrapper').height($(window).height());				
+		});
 	}
 
 }
